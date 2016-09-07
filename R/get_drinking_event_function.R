@@ -58,6 +58,7 @@ get_drinking_event <- function(df,water_layer=NULL,threshold=500,returnTime=6,pr
   if(!id){
     df$id <- "ArbitraryID"
   }
+  # test
   zebraevent <- data.frame("id"=as.character(NA),"dateTime"=as.POSIXct(NA),"waterhole"=as.character(NA))
   zebraevent <- dplyr::mutate(zebraevent,id=as.character(id),waterhole=as.character(waterhole),dateTime=as.POSIXct(dateTime))
   
