@@ -4,7 +4,7 @@
 \alias{get_distance2water}
 \title{Get distance to water}
 \usage{
-get_distance2water(df, water_layer, projstring)
+get_distance2water(df, water_layer = NULL, voronoi = NULL, projstring)
 }
 \arguments{
 \item{df}{a dataframe with at least coordinates  \code{df$x}, \code{df$y} and
@@ -12,6 +12,11 @@ date and time in \code{df$dateTime} in POSIXct class.}
 
 \item{water_layer}{a SpatialPointsDataFrame of waterhole with column 
 \code{$name} in data slot.}
+
+\item{voronoi}{polygons of water_layer}
+}
+\value{
+a list with element dist2water and waterhole
 }
 \description{
 \code{get_distance2water} gets distance to water from SpatialPointsDataFrame

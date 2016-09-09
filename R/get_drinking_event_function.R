@@ -27,13 +27,8 @@
 # TZ <- "Africa/Harare"
 # UTMstring <- "+proj=utm +zone=35 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
 # projstring <- UTMstring
-# water <- rgdal::readOGR(dsn="../../../data/Hwange/Raw/Waterholes/waterhole_park_update2_Hugo_2014.shp",layer="waterhole_park_update2_Hugo_2014")
-# water@data$pump[229]="pan"
-# pump=water[water@data$pump == "pump",]
-# pan=water[water@data$pump == "pan",]
-# sp::proj4string(pump)=UTMstring
-# sp::proj4string(pan)=UTMstring
-# zebra <- read.csv("../../These/Zebra - Hwange - Data/data/Formatted/zeball_2016_08_31.csv.gz")
+# water <- rgdal::readOGR(dsn="../../These/Hwange/Data - Waterholes/data/Formatted/pump.shp",layer="pump")
+# zebra <- read.csv("../../These/Hwange/Zebra - Data/data/Formatted/zeball_2016_08_31.csv.gz")
 # water_layer <- pump
 # ID <- first(zebra$id)
 # df <- dplyr::filter(zebra,id==ID)
